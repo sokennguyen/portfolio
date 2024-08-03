@@ -12,6 +12,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
     },
     fontSize: {
       sm: "0.8rem",
@@ -20,12 +23,12 @@ module.exports = {
       "2xl": "1.563rem",
       "3xl": "1.953rem",
       "4xl": "2.441rem",
-      "5xl": "3.052rem",
+      "5xl": ["2.8rem", { lineHeight: "2.5rem" }],
       "6xl": "3.815rem",
       "7xl": [
-        "10rem",
+        "9rem",
         {
-          lineHeight: "8rem",
+          lineHeight: "3rem",
         },
       ],
       "8xl": [
@@ -35,9 +38,9 @@ module.exports = {
         },
       ],
       "9xl": [
-        "12rem",
+        "11rem",
         {
-          lineHeight: "10rem",
+          lineHeight: "8rem",
         },
       ],
     },
