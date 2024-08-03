@@ -11,7 +11,7 @@ To run the portfolio locally, clone the repository and run the following command
 npm install
 npm run start
 ```
-And access it at [localhost:3000]{http://localhost:3000}.
+And access it at [localhost:3000](http://localhost:3000).
 idk why this is available, but it is.
 
 ### Built with
