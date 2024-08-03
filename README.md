@@ -3,7 +3,7 @@
 I am Kien, software developer who's constantly learning how to build useful software for one group of people at a time.
 
 ### Check it out
-The portfolio is live at [portfolio.nskien.xyz]{https://portfolio.nskien.xyz}
+The portfolio is live at [portfolio.nskien.xyz](https://portfolio.nskien.xyz)
 
 ### Run
 To run the portfolio locally, clone the repository and run the following commands:
