@@ -12,7 +12,7 @@ npm install
 npm run start
 ```
 And access it at [localhost:3000](http://localhost:3000).
-idk why this is available, but it is.
+idk why building this portfolio from source is available, but it is, so enjoy.
 
 ### Built with
 Next.js, Tailwind CSS, Vercel, and myBrain™.
