@@ -74,7 +74,7 @@ export default function Project({ headFont }) {
           className="rounded-xl"
           objectFit="cover"
           unoptimized={true}
-          src="/dreamemberArchive.gif"
+          src="/dreamemberArchiveCropped.gif"
         />
       </div>
     </div>
