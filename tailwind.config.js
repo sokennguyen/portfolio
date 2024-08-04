@@ -14,7 +14,42 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",
+        "fade-up": "fadeUp 0.5s ease-in",
+        "fade-down": "fadeDown 0.5s ease-in",
+        "fade-right": "fadeRight 0.5s ease-in",
       },
+      keyframes: (theme) => ({
+        fadeRight: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        fadeDown: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        fadeUp: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+      }),
     },
     fontSize: {
       sm: "0.8rem",
