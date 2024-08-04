@@ -14,7 +14,7 @@ export default function Hero() {
           <div className={sixCaps.className}>
             <div
               className="flex animate-spin-slow flex-col text-gray-600 rounded-full
-          12 lg:h-32 lg:w-32 h-20 w-20 justify-center items-center space-y-2 text-4xl lg:text-5xl bg-red-400"
+          12 lg:h-32 lg:w-32 h-16 w-16 justify-center items-center space-y-2 text-4xl lg:text-5xl bg-red-400"
             >
               <span>SOFTWARE</span> <span>DEVELOPER</span>
             </div>
