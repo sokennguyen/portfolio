@@ -5,13 +5,15 @@ const basteleur = localFont({ src: "../Basteleur-Bold.woff2" });
 export default function Project({ headFont }) {
   return (
     <div className="h-screen text-gray-200 bg-emerald-500 p-2 grid grid-cols-4 grid-rows-8 gap-1">
-      <div className="col-span-2 row-span-1 col-start-2 flex  text-5xl text-pink-300 justify-end items-center flex-col pb-2">
-        <text className={basteleur.className}>Dreamember</text>
+      <div className="col-span-2 row-span-1 col-start-2 text-4xl text-pink-300 flex flex-col justify-end items-center pb-2">
+        <text className={basteleur.className}>Hiku Dev</text>
       </div>
       <div className="col-span-4 row-span-1 row-start-2 col-start-1 pt-2 text-center">
-          <text className="text-black text-md">
-             A dream archiving application that makes dream journalling fully digital
-          </text>
+        <text className="text-black text-md">
+          As a product tester at a developer tool startup, I helped to build a
+          more production ready product through finding bugs and create
+          solutions for them.
+        </text>
       </div>
       <div className="col-span-3 row-span-2 row-start-3 relative">
         <Image

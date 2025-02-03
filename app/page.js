@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
-import Project from "./components/Project";
+import Dreamember from "./components/Dreamember";
+import Hiku from "./components/Hiku";
 import localFont from "next/font/local";
 const barber = localFont({ src: "./Barber-Complete.woff2" });
 
@@ -10,10 +11,10 @@ export default function Home() {
         <Hero headFont={barber} />
       </div>
       <div className="snap-center snap-always">
-        <Project headFont={barber} />
+        <Dreamember />
       </div>
       <div className="snap-center snap-always">
-        <Project content={"project 2"} />
+        <Hiku />
       </div>
     </main>
   );
