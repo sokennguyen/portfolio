@@ -1,88 +1,42 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-const basteleur = localFont({ src: "../Basteleur-Bold.woff2" });
+const headerFont = localFont({ src: "../../public/fonts/ChangaOne-Regular.ttf" });
 
 export default function Project({ headFont }) {
   return (
-    <div className="h-screen text-gray-200 bg-emerald-500 p-2 grid grid-cols-4 grid-rows-8 gap-1">
-      <div className="col-span-2 row-span-1 col-start-2 text-4xl text-pink-300 flex flex-col justify-end items-center pb-2">
-        <text className={basteleur.className}>Hiku Dev</text>
+    <div className="h-screen text-gray-200 bg-blue-300 p-2 grid grid-cols-6 grid-rows-12 gap-0">
+      <div className="col-span-1 row-span-1 row-start-1 col-start-1 pt-2 flex items-end justify-end relative">
+        <Image
+          fill={true}
+          alt="hiku icon"
+          className="rounded-xl "
+          objectFit="contain"
+          src="/hiku-favicon.png"
+        />
       </div>
-      <div className="col-span-4 row-span-1 row-start-2 col-start-1 pt-2 text-center">
-        <text className="text-black text-md">
+      <div className="col-span-6 row-span-1 row-start-2 col-start-1 flex flex-col justify-start items-start space-y-4">
+        <text className={headerFont.className}>
+          <div className="text-5xl text-teal-700">Hiku Dev</div>
+        </text>
+        <text className="text-black text-xl">
           As a product tester at a developer tool startup, I helped to build a
-          more production ready product through finding bugs and create
+          more production ready product through finding bugs and creating
           solutions for them.
         </text>
       </div>
-      <div className="col-span-3 row-span-2 row-start-3 relative">
+      <div className="col-span-6 row-span-4 row-start-6 rounded-xl relative overflow-hidden">
         <Image
           fill={true}
-          alt="dreamember"
-          className="rounded-xl "
-          objectFit="cover"
-          src="/dreamemberCropped.png"
+          alt="hiku wireframe"
+          objectFit="contain"
+          className="w-full h-full"
+          src="/hikuWire.svg"
         />
       </div>
-      <div className="col-span-1 row-start-3 col-start-4 relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl"
-          objectFit="cover"
-          unoptimized={true}
-          src="/dreamemberAccordian.gif"
-        />
-      </div>
-      <div className="col-span-1 row-start-4 col-start-4 relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl"
-          objectFit="cover"
-          src="/dreamemberReview.png"
-        />
-      </div>
-
-      {/* Second Row */}
-
-      <div className="col-span-4 row-span-2 row-start-5 col-start-1 relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl "
-          objectFit="cover"
-          src="/dreamemberAdmin.png"
-        />
-      </div>
-      <div className="col-span-1 row-start-7 col-start-1  relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl"
-          objectFit="cover"
-          unoptimized={true}
-          src="/dreamemberSlider.gif"
-        />
-      </div>
-      <div className="col-span-1 row-start-7 col-start-2 relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl"
-          objectFit="cover"
-          src="/dreamemberTag.png"
-        />
-      </div>
-      <div className="col-span-2 row-start-7 col-start-3 relative">
-        <Image
-          fill={true}
-          alt="dreamember"
-          className="rounded-xl"
-          objectFit="cover"
-          unoptimized={true}
-          src="/dreamemberArchiveCropped.gif"
-        />
+      <div className="col-span-2 row-span-1 row-start-10 col-start-3">
+        <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-teal-800 bg-teal-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
+          Read More
+        </button>
       </div>
     </div>
   );
