@@ -33,7 +33,7 @@ export default function Project({ headFont }) {
           src="/hikuWire.svg"
         />
       </div>
-      <div className="col-span-2 row-span-1 row-start-10 col-start-3">
+      <div className="col-span-2 row-span-1 row-start-10 col-start-5">
         <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-teal-800 bg-teal-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
           Read More
         </button>

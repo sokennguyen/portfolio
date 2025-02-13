@@ -24,8 +24,7 @@ export default function Project({ headFont }) {
       clipPath: "inset(0% 100% 0% 0%)", // Hide from right
     }, {
       clipPath: "inset(0% 0% 0% 0%)", // Reveal fully
-      delay: 0.25,
-      stagger: 0.5,
+      stagger: 0.35,
       duration: 1,
     });
 
@@ -40,7 +39,7 @@ export default function Project({ headFont }) {
 
   return (
     <div className="thesis h-screen text-gray-200 bg-white px-5 grid grid-cols-1 grid-rows-12 gap-0">
-      <div className="col-span-1 row-span-2 row-start-1 col-start-1 flex flex-col justify-center items-start space-y-1">
+      <div className="col-span-1 row-span-2 row-start-1 col-start-1 flex flex-col justify-center items-end space-y-1">
         <div className={`${headerFont.className} relative z-0`}>
           <div className="reveal highlight highlight-variant-6 highlight-yellow-300 text-5xl text-black">Performance</div>
           <div className="hide text-5xl text-black z-10 inset-0 absolute">Performance</div>
@@ -67,10 +66,10 @@ export default function Project({ headFont }) {
           solutions for them.
         </text>
       </div>
-      <div className="reveal col-span-1 row-span-1 row-start-12 col-start-1 flex justify-end items-start">
-        <p className="highlight highlight-yellow-300 highlight-variant-4 h-16 w-32 flex items-center justify-center text-black text-xl font-medium">
+      <div className="reveal col-span-1 row-span-1 row-start-12 col-start-1 flex justify-start items-start">
+        <button className="highlight highlight-yellow-300 highlight-variant-4 h-16 w-32 flex items-center justify-center text-black text-xl font-medium">
           Read More
-        </p>
+        </button>
       </div>
     </div >
   );
