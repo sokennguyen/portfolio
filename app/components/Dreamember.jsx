@@ -3,76 +3,65 @@ import Image from "next/image";
 import localFont from "next/font/local";
 const basteleur = localFont({ src: "../Basteleur-Bold.woff2" });
 
-import { useRef } from 'react';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  
-gsap.registerPlugin(ScrollTrigger) 
-gsap.registerPlugin(useGSAP) 
+import { useEffect, useLayoutEffect, useRef } from "react";
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function Project({ headFont }) {
-  const container = useRef();
 
-
+  const target = useRef(null)
   useGSAP(() => {
-      // gsap code here...
-      gsap.from('.header', { 
-                            y: 50, 
-                            opacity: 0, 
-                            duration:1.1,
-                            stagger: 0.1,
-                            ease: "elastic.out(1,0.75)",
-                          }); // <-- automatically reverted
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.header',
+        scroller: 'main'
+      }
+    })
 
-  },{ scope: container }); // <-- scope is for selector text (optional)
+    tl.fromTo(target.current.querySelectorAll('.header'), {
+      y: 50,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1.1,
+      stagger: 0.1,
+      ease: "elastic.out(1,0.75)",
+    })
+
+  });
+
+
+
+
 
   return (
-    <div ref={container} className="dreamemberHead h-screen text-gray-200 bg-white p-2 grid grid-cols-4 grid-rows-8 gap-1">
+    <div ref={target} className="dreamemberHead h-screen text-gray-200 bg-white p-2 grid grid-cols-4 grid-rows-8 gap-1 relative">
       <div className="col-span-4 row-span-1 col-start-1 flex flex-row text-5xl text-orange-400 justify-center items-end pb-2">
-        <div className='header' >
-          <p className={basteleur.className}>D</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>r</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>e</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>a</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>m</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>e</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>m</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>b</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>e</p>
-        </div>
-        <div className='header' >
-          <p className={basteleur.className}>r</p>
-        </div>
+        <p className={`header ${basteleur.className}`}>D</p>
+        <p className={`header ${basteleur.className}`}>r</p>
+        <p className={`header ${basteleur.className}`}>e</p>
+        <p className={`header ${basteleur.className}`}>a</p>
+        <p className={`header ${basteleur.className}`}>m</p>
+        <p className={`header ${basteleur.className}`}>e</p>
+        <p className={`header ${basteleur.className}`}>m</p>
+        <p className={`header ${basteleur.className}`}>b</p>
+        <p className={`header ${basteleur.className}`}>e</p>
+        <p className={`header ${basteleur.className}`}>r</p>
       </div>
-      <div className="col-span-4 row-span-1 row-start-2 col-start-1 pt-2 text-justify">
-        <text className="text-black text-lg">
+      <div className="col-span-4 row-span-1 row-start-2 col-start-1 px-3 text-justify">
+        <text className="text-black text-xl">
           I designed and developed a dream archiving application that makes
-          dream journalling fully digital
+          dream journalling fully digital.
         </text>
       </div>
       <div className="col-span-3 row-span-2 row-start-3 relative">
         <Image
           fill={true}
           alt="dreamember"
-          className="rounded-tl-xl "
+          className="rounded-tl-3xl "
           objectFit="cover"
           src="/dreamemberCropped.png"
         />
@@ -81,7 +70,7 @@ export default function Project({ headFont }) {
         <Image
           fill={true}
           alt="dreamember"
-          className="rounded-tr-xl"
+          className="rounded-tr-3xl"
           objectFit="cover"
           unoptimized={true}
           src="/dreamemberAccordian.gif"
@@ -112,7 +101,7 @@ export default function Project({ headFont }) {
         <Image
           fill={true}
           alt="dreamember"
-          className="rounded-bl-xl"
+          className="rounded-bl-3xl"
           objectFit="cover"
           unoptimized={true}
           src="/dreamemberSlider.gif"
@@ -131,17 +120,17 @@ export default function Project({ headFont }) {
         <Image
           fill={true}
           alt="dreamember"
-          className="rounded-br-xl"
+          className="rounded-br-3xl"
           objectFit="cover"
           unoptimized={true}
           src="/dreamemberArchiveCropped.gif"
         />
       </div>
       <div className="col-span-2 row-span-1 row-start-8 col-start-2 flex justify-center py-1">
-        <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-orange-800 bg-orange-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-orange-800 bg-orange-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
           Read More
         </button>
       </div>
-    </div>
+    </div >
   );
 }

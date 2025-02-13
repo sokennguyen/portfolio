@@ -4,8 +4,8 @@ const headerFont = localFont({ src: "../../public/fonts/ChangaOne-Regular.ttf" }
 
 export default function Project({ headFont }) {
   return (
-    <div className="h-screen text-gray-200 bg-blue-300 p-2 grid grid-cols-6 grid-rows-12 gap-0">
-      <div className="col-span-1 row-span-1 row-start-1 col-start-1 pt-2 flex items-end justify-end relative">
+    <div className="h-screen text-gray-200 bg-blue-300 p-5 grid grid-cols-6 grid-rows-12 gap-0 ">
+      <div className="col-span-1 row-span-1 row-start-1 col-start-1 pt-2 flex items-end justify-end relative">
         <Image
           fill={true}
           alt="hiku icon"
@@ -34,7 +34,7 @@ export default function Project({ headFont }) {
         />
       </div>
       <div className="col-span-2 row-span-1 row-start-10 col-start-3">
-        <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-teal-800 bg-teal-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-teal-800 bg-teal-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
           Read More
         </button>
       </div>
