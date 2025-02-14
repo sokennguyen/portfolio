@@ -2,6 +2,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 const basteleur = localFont({ src: "../Basteleur-Bold.woff2" });
+import TechItemList from "./TechItemList";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -9,19 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useLayoutEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-function TechItemList({ iconSrc, name }) {
-  return (
-    <li className="flex flex-row space-x-2">
-      <Image
-        height={50}
-        width={50}
-        src={iconSrc}
-        alt={`${name}-icon`}
-      />
-      <p className="text-4xl flex items-center text-black font-medium">{name}</p>
-    </li>
-  )
-}
 export default function Dreamember({ headFont }) {
 
   const target = useRef(null)
@@ -150,10 +138,10 @@ export default function Dreamember({ headFont }) {
           made with
         </p>
         <div className="flex flex-col space-y-5">
-          <TechItemList iconSrc={'/nextjs.png'} name={'Next.js'} />
-          <TechItemList iconSrc={'/daisyui.png'} name={'daisyUI'} />
-          <TechItemList iconSrc={'/mongo.ico'} name={'MongoDB'} />
-          <TechItemList iconSrc={'/cloudflare.png'} name={'Cloudflare'} />
+          <TechItemList iconSrc={'/nextjs.png'} name={'Next.js'} size={'3xl'} />
+          <TechItemList iconSrc={'/daisyui.png'} name={'daisyUI'} size={'3xl'} />
+          <TechItemList iconSrc={'/mongo.ico'} name={'MongoDB'} size={'3xl'} />
+          <TechItemList iconSrc={'/cloudflare.png'} name={'Cloudflare'} size={'3xl'} />
         </div>
         <button className="group relative inline-flex w-32 h-16 items-center justify-center overflow-hidden rounded-md border border-orange-800 bg-orange-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
           Read More

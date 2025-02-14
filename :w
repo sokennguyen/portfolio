@@ -27,7 +27,7 @@ export default function Project({ headFont }) {
       </div>
 
       {/*laptop viewport layout*/}
-      <div className="hidden col-span-1 row-span-1 row-start-1 col-start-1 lg:flex flex-col justify-center items-start px-24">
+      <div className="hidden col-span-1 row-span-1 row-start-1 col-start-1 lg:flex flex-col justify-center items-end px-24">
         <div className={`flex flex-row relative justify-between items-center space-x-2`}>
           <Image
             width={90}
@@ -40,13 +40,13 @@ export default function Project({ headFont }) {
             Hiku Dev
           </div>
         </div>
-        <div className="text-black text-2xl col-span-1 col-start-1">
+        <div className="text-black text-2xl col-span-1 col-start-1 text-end">
           As a product tester at a developer tool startup, I helped to build a
           more production ready product through finding bugs and creating
           solutions for them.
         </div>
         <div className="w-full">
-          <p className={`header ${headerFont.className} text-5xl flex items-center text-teal-700 font-bold py-8`} >
+          <p className={`header ${headerFont.className} text-5xl flex items-center text-teal-700 font-bold py-8 text-end`} >
             worked with
           </p>
           <div className="flex flex-col space-y-10 ">
