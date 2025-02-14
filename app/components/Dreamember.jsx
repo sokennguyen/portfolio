@@ -121,7 +121,7 @@ export default function Dreamember({ headFont }) {
         <Image
           fill={true}
           alt="dreamember"
-          className="rounded-br-3xl lg:rounded-xl"
+          className="rounded-br-3xl lg:rounded-xl object-left"
           objectFit="cover"
           unoptimized={true}
           src="/dreamemberArchiveCropped.gif"
