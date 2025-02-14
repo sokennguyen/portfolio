@@ -90,7 +90,7 @@ export default function Project({ headFont }) {
       </div>
       <div className="hidden lg:flex flex-col col-span-1 col-start-3 row-span-1 row-start-1 items-center justify-end">
         <div className="grid grid-cols-2 gap-10">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 justify-end">
             <text className="text-black text-2xl text-start flex items-end">
               As a product tester at a developer tool startup, I helped to build a
               more production ready product through finding bugs and creating
