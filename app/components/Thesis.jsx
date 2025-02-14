@@ -112,7 +112,7 @@ export default function Project({ headFont }) {
               <TechItemList iconSrc={'/sqlite.jpg'} name={'SQLite'} size={'3xl'} />
               <TechItemList iconSrc={'/azure.jpg'} name={'Azure'} size={'3xl'} />
               <div className="flex flex-row space-x-1">
-                <div class="flex flex-col items-center -space-y-2 overflow-hidden">
+                <div className="flex flex-col items-center -space-y-2 overflow-hidden">
                   <Image
                     height={40}
                     width={40}
@@ -120,7 +120,7 @@ export default function Project({ headFont }) {
                     src={'/js.png'}
                     alt={`js-icon`}
                   />
-                  <div class="flex -space-x-2 overflow-hidden">
+                  <div className="flex -space-x-2 overflow-hidden">
                     <Image
                       height={40}
                       width={40}

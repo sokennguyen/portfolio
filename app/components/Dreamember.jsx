@@ -140,7 +140,7 @@ export default function Dreamember({ headFont }) {
         <div className="flex flex-col space-y-5">
           <TechItemList iconSrc={'/nextjs.png'} name={'Next.js'} size={'3xl'} />
           <TechItemList iconSrc={'/daisyui.png'} name={'daisyUI'} size={'3xl'} />
-          <TechItemList iconSrc={'/mongo.ico'} name={'MongoDB'} size={'3xl'} />
+          <TechItemList iconSrc={'/mongo.png'} name={'MongoDB'} size={'3xl'} />
           <TechItemList iconSrc={'/cloudflare.png'} name={'Cloudflare'} size={'3xl'} />
         </div>
         <button className="group relative inline-flex w-32 h-16 items-center justify-center overflow-hidden rounded-md border border-orange-800 bg-orange-500 px-3 font-medium text-neutral-900 transition-all [box-shadow:0px_4px_1px_rgb(82_82_82)] active:translate-y-[2px] active:shadow-none">
