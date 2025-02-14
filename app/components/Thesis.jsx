@@ -16,8 +16,7 @@ export default function Project({ headFont }) {
       scrollTrigger: {
         trigger: '.thesis',
         scroller: 'main',
-        start: "top 10%",
-        markers: true,
+        start: "top 90%",
       }
     })
 
@@ -84,7 +83,7 @@ export default function Project({ headFont }) {
           <div className="hide  text-black z-10 inset-0 absolute">Speed</div>
         </div>
         <div className={`${headerFont.className} relative z-0`}>
-          <div className="reveal highlight highlight-variant-8 highlight-yellow-300  text-black">Research</div>
+          <div className="reveal highlight highlight-variant-3 highlight-yellow-300  text-black">Research</div>
           <div className="hide  text-black z-10 inset-0 absolute">Research</div>
         </div>
       </div>

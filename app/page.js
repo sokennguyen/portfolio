@@ -8,9 +8,9 @@ const barber = localFont({ src: "./Barber-Complete.woff2" });
 
 export default function Home() {
   return (
-    <main className="flex flex-col snap-y snap-mandatory overflow-scroll bg-orange-200 h-dvh ">
+    <main className="flex flex-col snap-y snap-mandatory overflow-scroll bg-orange-50 h-dvh ">
       <div className="snap-center snap-always">
-        <Hero headFont={barber} />
+        <Hero />
       </div>
       <div className="snap-center snap-always">
         <Dreamember />

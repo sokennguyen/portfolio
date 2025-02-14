@@ -1,27 +1,64 @@
-import { Six_Caps } from "next/font/google";
-const sixCaps = Six_Caps({ subsets: ["latin"], weight: ["400"] });
+import localFont from "next/font/local";
+import Image from "next/image";
 
-export default function Hero({ headFont }) {
+const heroFont = localFont({ src: "../../public/fonts/ComicNeue-Light.ttf" });
+const subHeroFont = localFont({ src: "../../public/fonts/Quicksand-Regular.ttf" });
+
+export default function Hero({ }) {
   return (
-    <div className="flex flex-col lg:justify-end justify-center items-center min-h-screen w-full">
-      <div className="lg:pb-16 lg:pl-32 flex flex-col space-y-5 lg:space-y-16 w-full">
-        <div className="flex flex-row items-center justify-center space-x-2">
-          <h1 className="lg:text-9xl font-extrabold text-7xl text-gray-700 animate-fade-down text-left">
-            <text className={headFont.className}>Kiên</text>
-          </h1>
-          <div className={sixCaps.className}>
-            <div
-              className="flex animate-[spin_2s_ease-in-out_infinite] flex-col text-gray-600 rounded-full
-          12 lg:h-32 lg:w-32 h-16 w-16 justify-center items-center space-y-2 text-3xl lg:text-5xl bg-red-400"
-            >
-              <span>SOFTWARE</span> <span>DEVELOPER</span>
+    <div className="flex flex-col min-h-screen w-full  justify-start space-y-5 lg:space-y-24 lg:pt-10" >
+      <h1 className={`${heroFont.className} lg:text-9xl font-light text-7xl text-gray-700 text-center flex flex-col space-y-5`}>
+        <div>kien nguyen is a full stack</div>
+        <div>software developer based</div>
+        <div>in helsinki, finland</div>
+      </h1>
+      <div>
+        <p className={`${subHeroFont.className} lg:text-5xl font-medium text-7xl text-gray-700 text-center flex flex-col lg:space-y-0`}>
+          <div className="flex justify-center items-center space-x-0">
+            <div>
+              he loves mandarins
             </div>
+            <Image
+              width={120}
+              height={200}
+              alt="A mandarin"
+              className="-rotate-12 "
+              objectFit="cover"
+              unoptimized={true}
+              src="/real-mandarin.png"
+            />
+            <div>
+              ,
+              acoustic guitar sounds
+            </div>
+            <Image
+              width={120}
+              height={200}
+              alt="A guitar"
+              className="rotate-6 "
+              objectFit="cover"
+              unoptimized={true}
+              src="/real-guitar.png"
+            />
+            ,
           </div>
-        </div>
+          <div className="flex justify-center items-center space-x-0">
+            tinkering with old thinkpads
+            <Image
+              width={100}
+              height={100}
+              alt="A guitar"
+              className=""
+              objectFit="cover"
+              unoptimized={true}
+              src="/thinkpad.png"
+            />, and blazingly fast software!
+          </div>
+          <div className="lg:pt-14">
+            view his works below, or say hi via email or linkedin.
+          </div>
+        </p>
         <div>
-          <h1 className="lg:text-7xl text-6xl font-extralight text-gray-700 text-center  lg:text-left">
-            <text className={headFont.className}>Nguyễn</text>
-          </h1>
           <div className="flex animate-bounce text-gray-600 justify-center pt-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +77,6 @@ export default function Hero({ headFont }) {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
